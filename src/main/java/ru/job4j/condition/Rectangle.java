@@ -11,7 +11,6 @@ public class Rectangle {
         double result = diagonal(3, 4);
         System.out.println("Diagonal of rectangle with length 3 and width 4 is " + result);
 
-
         double result1 = diagonal(5, 12);
         System.out.println("Diagonal of rectangle with length 3 and width 4 is " + result1);
 
