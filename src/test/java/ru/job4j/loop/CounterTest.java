@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class CounterTest {
 
     @Test
-    void start0finish10then55() {
+    void whenSumNumbersFromOneToTenThenThirty() {
         int start = 0;
         int finish = 10;
         int expected = 55;
@@ -18,7 +18,7 @@ class CounterTest {
     }
 
     @Test
-    void start3finish8then33() {
+    void whenSumNumbersFromThreeToEightThenEighteen() {
         int start = 3;
         int finish = 8;
         int expected = 33;
@@ -29,10 +29,10 @@ class CounterTest {
     }
 
     @Test
-    void start1finish1then1() {
+    void whenSumNumbersFromOneToOneThenZero() {
         int start = 1;
         int finish = 1;
-        int expected = 1;
+        int expected = 0;
 
         int output = Counter.sum(start, finish);
 
@@ -40,7 +40,7 @@ class CounterTest {
     }
 
     @Test
-    void start30finishMinus8then0() {
+    void whenSumNumbersFromThirtyToMinusEightThenZero() {
         int start = 30;
         int finish = -8;
         int expected = 0;
@@ -51,13 +51,58 @@ class CounterTest {
     }
 
     @Test
-    void start0finishMinus10then0() {
-        int start = 0;
-        int finish = -10;
-        int expected = 0;
+    void whenSumNumbersFromMinusFiveToTenThenForty() {
+        int start = -5;
+        int finish = 10;
+        int expected = 40;
 
         int output = Counter.sum(start, finish);
 
         assertThat(output).isEqualTo(expected);
+    }
+
+    @Test
+    void whenSumEvenNumbersFromOneToTenThenThirty() {
+        int start = 1;
+        int finish = 10;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 30;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenSumEvenNumbersFromThreeToEightThenEighteen() {
+        int start = 3;
+        int finish = 8;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 18;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenSumEvenNumbersFromOneToOneThenZero() {
+        int start = 1;
+        int finish = 1;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 0;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenSumEvenNumbersFromThirtyToMinusEightThenZero() {
+        int start = 30;
+        int finish = -8;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 0;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenSumEvenNumbersFromMinusFiveToTenThenTwentyFore() {
+        int start = -5;
+        int finish = 10;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 24;
+        assertThat(result).isEqualTo(expected);
     }
 }
