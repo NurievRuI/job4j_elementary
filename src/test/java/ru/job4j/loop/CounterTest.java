@@ -7,10 +7,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 class CounterTest {
 
     @Test
-    void start0finish10then15() {
+    void start0finish10then55() {
         int start = 0;
         int finish = 10;
-        int expected = 15;
+        int expected = 55;
 
         int output = Counter.sum(start, finish);
 
@@ -18,10 +18,10 @@ class CounterTest {
     }
 
     @Test
-    void start3finish8then15() {
+    void start3finish8then33() {
         int start = 3;
         int finish = 8;
-        int expected = 15;
+        int expected = 33;
 
         int output = Counter.sum(start, finish);
 
@@ -51,10 +51,10 @@ class CounterTest {
     }
 
     @Test
-    void start0finishMin10then15() {
+    void start0finishMinus10then0() {
         int start = 0;
-        int finish = 10;
-        int expected = 15;
+        int finish = -10;
+        int expected = 0;
 
         int output = Counter.sum(start, finish);
 
