@@ -29,10 +29,10 @@ class CounterTest {
     }
 
     @Test
-    void whenSumNumbersFromOneToOneThenZero() {
+    void whenSumNumbersFromOneToOneThenOne() {
         int start = 1;
         int finish = 1;
-        int expected = 0;
+        int expected = 1;
 
         int output = Counter.sum(start, finish);
 

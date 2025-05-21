@@ -3,7 +3,7 @@ package ru.job4j.loop;
 public class Counter {
     public static int sum(int start, int finish) {
         int sum = 0;
-        if (start >= finish) {
+        if (start > finish) {
             System.out.print("start is greater than finish, so sum is ");
             return 0;
         } else {
@@ -16,7 +16,7 @@ public class Counter {
 
     public static int sumByEven(int start, int finish) {
         int sum = 0;
-        if (start >= finish) {
+        if (start > finish) {
             System.out.print("start is greater than finish, so sum is ");
             return 0;
         } else {
