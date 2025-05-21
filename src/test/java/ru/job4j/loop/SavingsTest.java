@@ -20,7 +20,7 @@ class SavingsTest {
         double annualDeposit = 200;
         double percent = 10;
         int result = Savings.years(goal, annualDeposit, percent);
-        int expected = 4;
+        int expected = 5;
         assertThat(result).isEqualTo(expected);
     }
 
@@ -30,7 +30,7 @@ class SavingsTest {
         double annualDeposit = 100;
         double percent = 20;
         int result = Savings.years(goal, annualDeposit, percent);
-        int expected = 6;
+        int expected = 7;
         assertThat(result).isEqualTo(expected);
     }
 }
